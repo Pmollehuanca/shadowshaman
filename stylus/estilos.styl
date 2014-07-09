@@ -1,0 +1,322 @@
+@import 'nib'
+@import 'normalize.styl'
+@import 'fuentes.styl'
+blanco=white
+blanco_traslucido=rgba(255,255,255,0.1)
+grisclaro=#cfccd1
+negro_traslucido=rgba(0,0,0,0.55)
+rojo=#e74629
+rojo_traslucido=rgba(219,70,41,0.5)
+sizeletra=15px
+verde=#62b300
+verde_traslucido=rgba(135,204,0,0.5)
+morado=#360048
+
+.wrapa
+	background-image url(../img/bg01.jpg)
+	background-position center top
+	background-repeat no-repeat
+	height 100%
+
+html
+	background-color black
+	height 100%
+
+
+body
+	background-image url(../img/bg01.jpg)
+	background-position center top
+	background-repeat no-repeat
+	background-attachment fixed
+	font-family 'arial'
+	height 100%
+	width 100%
+	height 100%
+	color blanco
+	font-size 15px
+
+a
+	color blanco
+
+figure
+	margin 0
+
+h2
+	font-weight normal
+
+/*-----------OOCSS-----------*/
+
+.borderbg
+	border-top solid 1px blanco_traslucido
+	border-bottom solid 1px blanco_traslucido
+
+.btn
+	font-size 1em
+	display block
+	width 14rem
+	height 3.5rem
+	border-radius 5px
+	text-decoration none
+	margin 0 auto
+	text-align center
+	&:nth-child(2)
+		margin-bottom 1rem
+	p
+		display block
+		margin 0
+		font-size 1em
+		&:nth-child(1)
+			text-transform uppercase
+			padding-top 13px
+			padding-bottom 0.1em
+		&:nth-child(2)
+			font-size 0.8em
+			margin-top -1px
+			&:after
+				content "-"
+				padding 0 0.4em
+			&:before
+				content "-"
+				padding 0 0.4em
+
+.btnrojo
+	border 1px solid rojo
+	background-color rojo_traslucido
+
+.btnverde
+	border 1px solid verde
+	background-color verde_traslucido
+
+.fondoarea
+	//background url(../img/bggray.jpg) repeat
+	background-color black
+
+.margenlateral
+	padding 0 1.5rem
+
+.left
+	float left
+
+.right
+	float right
+
+.opacidad
+	opacity 0.8
+
+.separador
+	margin-bottom 2.5rem
+
+.relative
+	position relative
+
+.timeless
+	font-family 'timeless'
+	text-transform uppercase
+	font-size 1.4rem
+	letter-spacing 0.2rem
+	word-spacing 0.3rem
+	font-weight normal
+
+
+/*-----------HOME TIENDA-----------*/
+
+.bienvenida
+	line-height 1.4em
+	font-weight normal
+	font-size 1em
+	margin 0 auto
+	margin-bottom 0.5rem
+	max-width 26rem
+	display block
+
+.categoria
+	display inline-block
+	width 8rem
+	margin-right 2rem
+	margin-bottom  1rem
+	box-shadow 0 0 12px black
+	transition box-shadow 0.2s
+	&:nth-child(even)
+		margin-right 0
+	&:hover
+		box-shadow 0 0 12px white
+	a
+		overflow hidden
+		text-decoration none
+		position relative
+
+	.descripcion
+		background-color negro_traslucido
+		bottom 0
+		font-size 0.75rem
+		margin -31px 0 0 0
+		left 0
+		padding 0.5rem 0
+		position absolute
+		right 0
+		text-transform uppercase
+		text-decoration none
+
+.container
+	text-align center
+
+.contcat
+	width 100%
+	padding-bottom 1.3rem
+
+.contcatart
+		display inline-block
+		font-size 0
+		width 19rem
+
+.contenlaces
+	font-size 1em
+	text-align center
+
+.contmenu
+	.icomenu
+		color morado
+		background-color blanco
+		display inline-block
+		padding 0.4em 0.9em
+		text-transform uppercase
+		font-weight bold
+		border-radius 2px
+		font-size 14px
+		text-decoration none
+
+	.menu
+		display none
+		ul
+			padding 0
+			margin 0
+			a
+				text-decoration none
+				&:nth-child(2)
+					li
+						border-top 1px blanco solid
+						border-bottom 1px blanco solid
+				li
+					display block
+					font-size 1em
+					margin 0
+					padding 1em 0
+					background-color grisclaro
+					color morado
+
+footer
+	text-align center
+	margin 0 auto
+	max-width 26rem
+	display block
+
+	p
+		line-height 1.4em
+		display block
+		margin-top 0
+		margin-bottom 1.5em
+
+.header
+	text-align center
+
+.logo
+	width 300px
+	margin-top 1rem
+
+.linkredes
+	font-size 1em
+	margin 0 auto
+	padding-top 0.5em
+	display block
+	text-decoration none
+	margin-bottom 2.5em
+
+.rs
+	display inline-block
+	width 7rem
+	
+	img
+		display block
+		margin 0 auto
+
+@media screen and (min-width:650px)
+
+	.bienvenida
+		max-width 38rem
+
+	.btn
+		display inline-block
+	
+		&:nth-child(2)
+			margin 0 1rem 0 0
+	
+	.categoria
+		height 8rem
+		margin-bottom 3.5rem
+		&:nth-child(even)
+			margin-right 2rem
+		&:nth-child(4)
+		&:nth-child(8)
+			margin-right 0
+		
+		.descripcion
+			background-color transparent
+			position inherit
+			margin-top 0.3rem
+	
+	.contcat
+		padding-bottom 0
+
+	.contcatart
+		width 38rem
+
+	footer
+		max-width 38rem
+		margin 0 auto
+
+	.logo
+		margin-top 1.5em
+
+@media screen and (min-width:1032px)
+	body
+		//background-image url(../img/bodeguero.png), url(../img/bg01.jpg)
+		//background-position bottom right, center top
+		//background-repeat no-repeat
+		//background-size 363px 288px, auto
+				
+		//, -webkit-radial-gradient(closest-corner, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4)), -webkit-linear-gradient(108deg, #0d0018, #360048 90%)
+		//background-size 363px 288px, 100% 100%, 100% 100%
+		//background-repeat no-repeat
+		//background-position right bottom
+		color white
+
+	.categoria
+		width 6.8rem
+		height 6.8rem
+		margin-right 1.1rem
+		a
+			figure
+				img
+					width 6.8rem
+					height 6.8rem
+		&:nth-child(even)
+			margin-right 1.1rem
+		&:last-child
+			margin-right 0
+
+	.contcatart
+		width 64.5rem
+
+
+@media screen and (min-width:1032px) and (min-height:900px)
+	
+	body
+		//background url(../img/bodeguero.png), -webkit-radial-gradient(closest-corner, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4)), -webkit-linear-gradient(108deg, #0d0018, #360048 90%)
+		//background-size 544px 432px, 100% 100%, 100% 100%
+		//background-repeat no-repeat
+		//background-position right bottom
+		//background-image url(../img/bodeguero.png), url(../img/bg01.jpg)
+		//background-position bottom right, center top
+		//background-repeat no-repeat
+		//background-size 544px 432px, auto
+		color white

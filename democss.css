@@ -1,0 +1,19 @@
+.productohome{
+	float:left;
+	background-color: #3C3C3C;
+	margin:10px;
+	text-align: center;
+}
+
+.allproducts{
+	
+}
+
+.clearfix {
+	clear:both;
+}
+
+.infoproduct{
+	color:white;
+	margin:5px;
+}
